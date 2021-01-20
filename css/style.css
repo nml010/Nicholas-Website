@@ -3,6 +3,9 @@
 	Onyx: #353839;
 	Royal Blue: #4169e1;
 	Silver: #c0c0c0;
+	Header: #141622;
+	Page: 272935;
+	Blue: 03afff;
 */
 body{
 	font-family: Arial, Helvetica, sans-serif;
@@ -10,7 +13,7 @@ body{
 	line-height: 1.5;
 	padding: 0;
 	margin: 0;
-	background-color: #353839;
+	background-color: #272935;
 	color: #f8f8ff;
 
 }
@@ -37,20 +40,50 @@ ul{
 
 .button_1{
 	height: 38px;
-	background: #4169e1;
+	background: #03afff;
 	border: none;
 	padding-left: 20px;
 	padding-right: 20px;
 	color: #f8f8ff; 
 }
 
+.row{
+	display: flex;
+}
+
+.column{
+	float: left;
+	padding: 10px;
+	max-width: 100%;
+}
+
+.avatar{
+	width: 25%;
+	margin: auto;
+	object-fit: cover;
+}
+
+.avatar-circle{
+	border-radius: 50%;
+}
+
+.about{
+	width: 75%;
+}
+
+.row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
 /* ..Header.. */
 header{
-	background: #343434;
+	background: #141622;
 	color: #f8f8ff;
-	padding-top: 30px;
-	min-height: 70px;
-	border-bottom: #4169e1 3px solid;
+	padding-top: 10px;
+	min-height: 50px;
+	border-bottom: #03afff 3px solid;
 }
 
 header a{
@@ -72,7 +105,7 @@ header #branding{
 
 header #branding h1{
 	margin: 0;
-	font-size: 50px;
+	font-size: 35px;
 }
 
 header nav{
@@ -81,7 +114,7 @@ header nav{
 }
 
 header .highlighting, header .current a{
-	color: #4169e1;
+	color: #03afff;
 	font-weight: bold;
 }
 
@@ -93,7 +126,7 @@ header a:hover{
 /* ..Showcase */
 #showcase{
 	min-height: 400px;
-	background: #353839;
+	background: #272935;
 	text-align: center;
 	color: #f8f8ff;
 }
@@ -112,7 +145,7 @@ header a:hover{
 #newsletter{
 	padding: 15px;
 	color: #f8f8ff;
-	background: #353839;
+	background: #272935;
 }
 
 #newsletter h1{
@@ -175,10 +208,10 @@ ul#services li{
 
 /* ..Footer.. */
 footer{
-	padding: 20px;
-	margin-top: 20px;
+	padding: 10px;
+	margin-top: 100px;
 	color: #ffffff;
-	background-color: #4169e1;
+	background-color: #03afff;
 	text-align: center;
 }
 
@@ -213,5 +246,9 @@ footer{
 	#newsletter form input[type="email"], .quote input, .quote textarea{
 		width: 100%
 		margin-bottom: 5px;
+	}
+
+	.column{
+		width: 100%;
 	}
 }
