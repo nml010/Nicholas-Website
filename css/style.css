@@ -1,11 +1,10 @@
 /* Color Hexes 
 	Ghost White: #f8f8ff;
-	Onyx: #353839;
-	Royal Blue: #4169e1;
-	Silver: #c0c0c0;
 	Header: #141622;
-	Page: 272935;
+	Dark Page: 272935;
+	Darker Page: 23252F;
 	Blue: 03afff;
+
 */
 body{
 	font-family: Arial, Helvetica, sans-serif;
@@ -49,6 +48,7 @@ ul{
 
 .row{
 	display: flex;
+	padding-top: 50px;
 }
 
 .column{
@@ -59,8 +59,7 @@ ul{
 
 .avatar{
 	width: 25%;
-	margin: auto;
-	object-fit: cover;
+	height: auto;
 }
 
 .avatar-circle{
@@ -69,6 +68,7 @@ ul{
 
 .about{
 	width: 75%;
+	text-align: left;
 }
 
 .row:after{
@@ -77,11 +77,24 @@ ul{
 	clear: both;
 }
 
+#showcase-alt{
+	background-color: #23252F;
+	padding: 20px;
+}
+
+.skill-icons{
+	width: auto;
+	height: auto;
+	transform: scale(.3,.3);
+	background-size: 10% 10%;
+}
+
 /* ..Header.. */
 header{
 	background: #141622;
 	color: #f8f8ff;
 	padding-top: 10px;
+	padding-left: 20px;
 	min-height: 50px;
 	border-bottom: #03afff 3px solid;
 }
@@ -208,11 +221,15 @@ ul#services li{
 
 /* ..Footer.. */
 footer{
-	padding: 10px;
-	margin-top: 100px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 1px 1px 0 1px;
 	color: #ffffff;
-	background-color: #03afff;
+	background-color: #141622;
 	text-align: center;
+	border-top: #03afff 3px solid;
+
 }
 
 /* ..Media Queries.. */
