@@ -71,25 +71,36 @@ ul{
 	text-align: left;
 }
 
-.row:after{
-	content: "";
-	display: table;
-	clear: both;
-}
-
 #showcase-alt{
 	background-color: #23252F;
 	padding: 20px;
 }
 
-.skill-icons{
-	width: auto;
-	height: auto;
-	transform: scale(.3,.3);
-	background-size: 10% 10%;
+.flex-container{
+	display: flex;
+	flex-direction: wrap;
 }
 
-/* ..Header.. */
+
+/*..Skills..*/
+
+.skill-icons{
+	width: 100%;
+	height: auto;
+}
+
+.skill-icons img{
+	width: auto;
+	height: 50%;
+	transform: scale(.4,.4);
+}
+
+.icon-title h3{
+	margin: auto;
+	font-size: 2rem;
+}
+
+/*..Header..*/
 header{
 	background: #141622;
 	color: #f8f8ff;
@@ -222,7 +233,6 @@ ul#services li{
 /* ..Footer.. */
 footer{
 	position: absolute;
-	bottom: 0;
 	width: 100%;
 	padding: 1px 1px 0 1px;
 	color: #ffffff;
@@ -267,5 +277,9 @@ footer{
 
 	.column{
 		width: 100%;
+	}
+
+	.row, .flex-container{
+		display: block;
 	}
 }
