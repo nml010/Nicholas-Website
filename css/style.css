@@ -19,7 +19,7 @@ body{
 
 /* ..Global.. */
 .container{
-	width: 80%
+	width: 80%;
 	margin: auto;
 	overflow: hidden;
 }
@@ -57,45 +57,56 @@ ul{
 	max-width: 100%;
 }
 
-.avatar{
+.col-left{
 	width: 25%;
 	height: auto;
 }
 
+.col-right{
+	width: 75%;
+	padding-left: 45px;
+	margin-left: 10px;
+	text-align: left;
+}
+
+.col-right h2{
+	text-align: center;
+}
+
+.avatar{
+	width: 100%;
+	height: auto;
+}
 .avatar-circle{
 	border-radius: 50%;
 }
 
-.about{
-	width: 75%;
-	text-align: left;
-}
-
-#showcase-alt{
-	background-color: #23252F;
-	padding: 20px;
-}
 
 .flex-container{
 	display: flex;
-	flex-direction: wrap;
+	flex-wrap: wrap;
 }
 
 
 /*..Skills..*/
+#skills{
+	background-color: #23252F;
+	padding: 20px;
+}
 
-.skill-icons{
+.skill-icon{
+	flex: 1 0 33.33333333%;
 	width: 100%;
 	height: auto;
 }
 
-.skill-icons img{
+.skill-icon img{
 	width: auto;
 	height: 50%;
 	transform: scale(.4,.4);
 }
 
-.icon-title h3{
+.skill-title h3{
 	margin: auto;
 	font-size: 2rem;
 }
@@ -234,7 +245,7 @@ ul#services li{
 footer{
 	position: absolute;
 	width: 100%;
-	padding: 1px 1px 0 1px;
+	padding-top: 10px;
 	color: #ffffff;
 	background-color: #141622;
 	text-align: center;
@@ -279,7 +290,7 @@ footer{
 		width: 100%;
 	}
 
-	.row, .flex-container{
+	.row, .skills, .flex-container{
 		display: block;
 	}
 }
