@@ -14,6 +14,9 @@ body{
 	margin: 0;
 	background-color: #272935;
 	color: #f8f8ff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
 }
 
@@ -29,7 +32,7 @@ ul{
 	padding: 0;
 }
 
-.dark{
+.contact-form{
 	padding: 15px;
 	color: #272935;
 	margin-top: 10px;
@@ -94,6 +97,23 @@ ul{
 	flex-wrap: wrap;
 }
 
+.page-wrap{
+	position: relative;
+	margin: 0 auto;
+	height: auto !important;
+	min-height: 100%;
+	margin-bottom: -142px;
+}
+
+.page-wrap:after{
+	content= "";
+	display: block;
+}
+
+.site-footer, .page-wrap:after{
+	min-height: 50px;
+}
+
 /*..Header..*/
 header{
 	background: #141622;
@@ -150,12 +170,6 @@ input, textarea{
 	font-family: sans-serif;
 }
 
-input:focus, textarea:focus{
-	border: 3px solid #03afff;
-	border-radius: 10px;
-	box-sizing: none;
-}
-
 /*..Showcase..*/
 #showcase{
 	min-height: 400px;
@@ -177,24 +191,21 @@ input:focus, textarea:focus{
 /*..Skills..*/
 #skills{
 	background-color: #23252f;
-	padding: 20px;
+	padding: 0px;
 }
 
 .skill-icon{
 	flex: 1 0 33.33333333%;
 	width: 100%;
-	height: auto;
 }
 
 .skill-icon img{
-	width: auto;
-	height: 50%;
+	height: 200px;
 	transform: scale(.4,.4);
 }
 
 .skill-title h3{
-	margin: auto;
-	font-size: 2rem;
+	font-size: 1rem;
 }
 
 /* ..Contact.. */
@@ -204,7 +215,6 @@ input:focus, textarea:focus{
 	background-color: #23252f;
 	margin: 0;
 	padding: 0;
-	position: absolute;
 }
 
 #contact h1{
@@ -225,6 +235,12 @@ input:focus, textarea:focus{
 	border: none;
 }
 
+#contact input[type="text"]:focus{
+	border: 3px solid #03afff;
+	border-radius: 10px;
+	outline: none;		
+}
+
 #contact input[type="email"]{
 	padding: 8px;
 	height: 25px;
@@ -233,16 +249,24 @@ input:focus, textarea:focus{
 	border:none;
 }
 
+#contact input[type="email"]:focus{
+	border: 3px solid #03afff;
+	border-radius: 10px;
+	outline: none;		
+}
+
 #contact textarea{
 	padding: 8px;
-	height: 100px;
+	height: 200px;
 	width: 501px;
 	color: #f8f8ff;
 	border: none;
 }
 
-#contact footer{
-
+#contact textarea:focus{
+	border: 3px solid #03afff;
+	border-radius: 10px;
+	outline: none;		
 }
 
 /* ..Boxes.. */
@@ -278,17 +302,29 @@ ul#services li{
 }
 
 /* ..Footer.. */
-footer{
+/*
+.site-footer{
+	background-color: #141622;
+	bottom: 0;
+	border-top: #03afff 3px solid;
 	position: absolute;
 	width: 100%;
-	padding-top: 10px;
-	color: #ffffff;
-	background-color: #141622;
 	text-align: center;
-	border-top: #03afff 3px solid;
-
+	padding-top: 10px;
 }
-
+*/
+.site-footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	min-height: 50px;
+	background-color: #141622;
+	border-top: #03afff solid 3px;
+}
 /* ..Media Queries.. */
 @media(max-width: 768px){
 	header #branding,
@@ -317,7 +353,9 @@ footer{
 		width: 100%
 	}
 
-	#newsletter form input[type="email"]{
+	#contact form input[type="email"],
+	#contact form input[type="text"],
+	#contact form textarea{
 		width: 100%
 		margin-bottom: 5px;
 	}
